@@ -1,0 +1,1 @@
+sonar-scanner.bat -D"sonar.organization=fuerzasginyu" -D"sonar.projectKey=software-final" -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io"

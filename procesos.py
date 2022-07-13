@@ -1,0 +1,1 @@
+insertar = lambda message, topic: "insert into mensajes values("+str(message)+","+str(topic)+");"
