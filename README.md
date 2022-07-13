@@ -1,5 +1,16 @@
 # software-final
 
+Es necesario crear un archivo **.env** en root con lo siguiente:
+```
+db_password=root
+```
+
+# DIRECTORIOS
+- /BACKEND: Directorio que cuenta con la aplicación y funciones que emplea
+- /ClIENTS: Clientes mínimos para realizar pruebas singulares del funcionamiento del backend
+- /STRESS_JMETER: Directorio que contiene el .jmx JMETER
+
+# ESTRES
 
 Como se aprecia en el resumen general de los stress test:
 - Throughputs de acuerdo a los lineamientos (post: 40 req/sec ; get: 20 req/sec)
