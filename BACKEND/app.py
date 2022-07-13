@@ -3,10 +3,13 @@ import psycopg2
 import procesos
 import os
 from dotenv import load_dotenv
+from flask_wtf import CSRFProtect
 
 load_dotenv()
 
 app = Flask(__name__)
+csrf = CSRFProtect()
+csrf.init_app(app)
 
 conn = psycopg2.connect(
     host="localhost",
@@ -17,6 +20,7 @@ conn = psycopg2.connect(
 
 
 @app.post("/message")
+@csrf.exempt
 def message_post():
     datos = request.get_json()
     cur = conn.cursor()
@@ -31,6 +35,7 @@ def message_post():
         return jsonify({'status':'fail'})
     
 @app.get("/message/<topic>")
+@csrf.exempt
 def message_get(topic):
     cur = conn.cursor()
     cur.execute(procesos.buscar(topic))
