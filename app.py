@@ -23,12 +23,20 @@ def message_post():
     try:
         cur.execute(procesos.insertar(datos["message"], datos["topic"]))
         conn.commit()
+        cur.close()
         return jsonify({'status':'ok'})
     except:
         conn.rollback()
+        cur.close()
         return jsonify({'status':'fail'})
     
-
+@app.get("/message/<topic>")
+def message_get(topic):
+    cur = conn.cursor()
+    cur.execute(procesos.buscar(topic))
+    filas = cur.fetchall()
+    cur.close()
+    return str(filas)
 
 
 app.run(port=8080, debug=True)

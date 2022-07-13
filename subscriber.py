@@ -1,14 +1,16 @@
 import requests
 
 
-class Publisher:
+
+class Subscriber:
     def __init__(self):
-        self.address = 'http://127.0.0.1:8080'
+        self.address = 'http://127.0.0.1:8080/message/'
 
-    def post_message(self, message, topic):
-        resp = requests.post(self.address, json={'message':message, 'topic':topic}, headers="application/json")
-        print(resp.json())
+    def search_topic(self, topic: str) -> str:
+        self.json['topic'] = topic
+        resp = requests.get(self.address+topic)
+        return resp.text
 
 
-pub = Publisher()
-pub.post_message("HOLAS", "medicine")
+pub = Subscriber()
+pub.search_topic("medicine")
