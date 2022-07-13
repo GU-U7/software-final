@@ -1,0 +1,18 @@
+[{
+    "message": "Good morning architects",
+    "topic": "architecture"
+},
+{
+    "message": "Good morning scientists",
+    "topic": "science"
+},
+
+{
+    "message": "Good morning streamers",
+    "topic": "streaming"
+},
+
+{
+    "message": "Good morning builder",
+    "topic": "building"
+}]

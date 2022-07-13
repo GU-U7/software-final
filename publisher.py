@@ -20,4 +20,4 @@ class Publisher:
 
 
 pub = Publisher()
-pub.post_message("HOLAS", "medicine")
+pub.post_message("HOLAS", "architecture")

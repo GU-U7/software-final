@@ -3,5 +3,5 @@ projectKey=software-final
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.30222
 dashboardUrl=https://sonarcloud.io/dashboard?id=software-final
-ceTaskId=AYH1NZQCYGgAeaDMB6Pq
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYH1NZQCYGgAeaDMB6Pq
+ceTaskId=AYH1RRACcYa7952zA4jf
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYH1RRACcYa7952zA4jf

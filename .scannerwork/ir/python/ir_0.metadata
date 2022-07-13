@@ -1,2 +1,2 @@
-subscriber.Publisher.__init__
+publisher.Publisher.__init__
 dict
